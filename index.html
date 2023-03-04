@@ -4,15 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css"/>
     <title>Weather Dashboard</title>
 </head>
 <body>
+    
+    <header class="p-3 mb-2 border-5 border-bottom border-dark text-center">
+      <h1 class="display-3">Weather Dashboard</h1>
+      <h2>
+        <p id="currentTime"></p>
+      </h2>
+    </header>
+    <div>
+        <div class="searchBar">Search For City</div>
+        <input type="text" placeholder="Search..">
+        <button type="button" class="btn btn-secondary searchBtn" id="cities">Search</button>
+    </div>
+    <h2 class="weatherHeader p-1 mb-1 text-center"> Current Weather Forcast </h2>
+    <div class="card mb-">
+        <h5 class="card-title">Date</h5>
+        <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" style="width: fit-content; height:50px; align-items: center;">
+        <div class="card-body">
+        <h3 class="card-title">Rainy</h3>
+          <p class="card-text">Temperature:</p>
+          <p class="card-text">Wind:</p>
+          <p class="card-text">Humidity:</p>
+          <p class="card-text">Precipitation:</p>
+        </div>
+      </div>
+      <h2 class="weatherHeader p-1 mb-1 text-center"> Future Weather Forcast </h2>
+    <div class="weather row row-cols-1 row-cols-md-5 g-2 pb-3">
+        <div class="col">
+          <div class="card h-85">
+            <h5 class="card-title">Date</h5>
+            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+            <div class="card-body">
+              <h3 class="card-title">Sunny</h3>  
+              <p class="card-text">Temperature:</p>
+              <p class="card-text">Wind:</p>
+              <p class="card-text">Humidity:</p>
+              <p class="card-text">Precipitation:</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-85">
+              <h5 class="card-title">Date</h5>
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <div class="card-body">
+                <h3 class="card-title">Rainy</h3>
+                <p class="card-text">Temperature:</p>
+                <p class="card-text">Wind:</p>
+                <p class="card-text">Humidity:</p>
+                <p class="card-text">Precipitation:</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-85">
+              <h5 class="card-title">Date</h5>
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <div class="card-body">
+                <h3 class="card-title">Rainy</h3> 
+                <p class="card-text">Temperature:</p>
+                <p class="card-text">Wind:</p>
+                <p class="card-text">Humidity:</p>
+                <p class="card-text">Precipitation:</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-85">
+              <h5 class="card-title">Date</h5>
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <div class="card-body">
+                <h3 class="card-title">Rainy</h3>
+                <p class="card-text">Temperature:</p>
+                <p class="card-text">Wind:</p>
+                <p class="card-text">Humidity:</p>
+                <p class="card-text">Precipitation:</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-85">
+              <h5 class="card-title">Date</h5>
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <div class="card-body">
+                <h3 class="card-title">Rainy</h3> 
+                <p class="card-text">Temperature:</p>
+                <p class="card-text">Wind:</p>
+                <p class="card-text">Humidity:</p>
+                <p class="card-text">Precipitation:</p>
+              </div>
+            </div>
+          </div>
+        
+        
     <!-- create a search bar to search for cities -->
     <!-- create a list of previous searched cities -->
     <!-- when searching for cities, it includes dates  -->
     <!-- when you search for the same city it does not show up in the list twice -->
     <!-- look at bolma, bootstrap, tailwind, foundation, materialize for frameworks -->
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+
     <script src="assets/script.js"></script>
+
 </body>
 </html>
