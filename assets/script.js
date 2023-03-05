@@ -99,16 +99,16 @@ $(".searchBtn").on('click',function(){
 var date = dayjs().format('dddd, MMMM D YYYY');
 $("#currentTime").html(date);
 
-function getApi(requestCurrentWeather , requestFutureWeather){
-    fetch(requestCurrentWeather , requestFutureWeather)
+// function getApi(requestCurrentWeather , requestFutureWeather){
+//     fetch(requestCurrentWeather , requestFutureWeather)
 
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-        })
-}
+//         .then(function(response){
+//             return response.json();
+//         })
+//         .then(function(data){
+//             console.log(data);
+//         })
+// }
 
 
 document.querySelector("#citySearch").value;
