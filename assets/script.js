@@ -6,24 +6,26 @@ $(document).ready(function(){
 // going to need to customize the url links to fit my paramaters. examples below api links
 var requestCurrentWeather = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={apikey}';
 // https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}
-var requestFutureWeather = 'api.openweathermap.org/data/2.5/forecast?q=${city}&appid={apikey}';
+var requestFutureWeather = 'https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid={apikey}';
 // api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid={API key}
-// var requestGeoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={apikey}';
+// var requestGeoUrl = 'https://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={apikey}';
 // http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
 
 
 // var currentApiKey = '533b1cafdc14cae714c56b255818f0eb'
 // var geoApiKey = '00b453bc62ba08c25a70335484e64353'
 var futureApiKey = 'f443a7bf0556b76f0d415dce60061886'
-var apiLink = 'api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&lang=en&appid=f443a7bf0556b76f0d415dce60061886';
+// var apiLink = 'https://api.openweathermap.org/data/2.5/forecast?q=${testCity}&units=imperial&lang=en&appid=f443a7bf0556b76f0d415dce60061886';
 // var units = 'imperial'
 // var lang = 'en'
-var city = document.getElementById('cities')
+var city = document.getElementById('citySearch')
 var previousSearched = document.querySelector("#searched")
 var previousCityArray = [];
 var previousSearchesList = document.querySelector("#searched .list-group-item")
 
-function getUrl(){
+function getUrl(testCity){
+    var apiLink = `https://api.openweathermap.org/data/2.5/forecast?q=${testCity}&units=imperial&lang=en&appid=f443a7bf0556b76f0d415dce60061886`;
+    console.log(apiLink);
     fetch(apiLink)
     .then(function(response){
         return response.json()
@@ -36,7 +38,7 @@ function getUrl(){
 }
 getUrl()
 
-let earlySearch= JSON.parse(localStorage.getItem("searched"));
+let earlySearch= JSON.parse(localStorage.getItem("searched")) ||[];
 
 if (earlySearch !== null) {
     for (let i = 0; i < earlySearch.length; i++) {
@@ -94,6 +96,9 @@ var updateCities = (city) => {
 }
 $(".searchBtn").on('click',function(){
     localStorage.setItem(citySearch.value ,date)
+    console.log(citySearch.value);
+    var testCity = citySearch.value;
+    getUrl(testCity)
 })
 
 var date = dayjs().format('dddd, MMMM D YYYY');
