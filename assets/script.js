@@ -15,7 +15,7 @@ var requestFutureWeather = 'api.openweathermap.org/data/2.5/forecast?q=${city}&a
 // var currentApiKey = '533b1cafdc14cae714c56b255818f0eb'
 // var geoApiKey = '00b453bc62ba08c25a70335484e64353'
 var futureApiKey = 'f443a7bf0556b76f0d415dce60061886'
-var apiLink = 'api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&lang=en&appid=f443a7bf0556b76f0d415dce60061886';
+var apiLink = 'api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&lang=en&appid=f443a7bf0556b76f0d415dce60061886';
 // var units = 'imperial'
 // var lang = 'en'
 var city = document.getElementById('cities')
