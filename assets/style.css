@@ -6,3 +6,7 @@ body {
 .card {
     margin: 20px;
 }
+
+.list-group:hover {
+    background-color: gray;
+}

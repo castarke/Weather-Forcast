@@ -20,17 +20,16 @@
         <div class="searchBar">Search For City</div>
         <input type="text" placeholder="Search.." id="citySearch">
         <button type="button" class="btn btn-secondary searchBtn" id="cities">Search</button>
-        <div id="previous-searches container" class="card">
-        <div class="card" style="width: 18rem;">
-        <div class="card-header">
-        Searched Cities
-                </div>
-                <ul class="list-group list-group-flush" id="searched">
-                  <li class="list-group-item"></li>
-                  <li class="list-group-item"></li>
-                  <li class="list-group-item"></li>
+        <!-- <div id="previous-searches container" class="card"> -->
+        <!-- <div class="card" style="width: 18rem;"> -->
+        <div class="card-header"><h2>Previous Searches</h2>
+            <div id="searched">
+                <ul class="list-group">
+            <!-- loop through previousCityArray to create list items -->
+            <!-- each list item should display a previously searched city -->
+            <!-- e.g. <li class="list-group-item">New York, NY</li> -->
                 </ul>
-              </div>
+            </div>
     </div>
     <h2 class="weatherHeader p-1 mb-1 text-center"> Current Weather Forcast </h2>
     <div class="card mb-">
@@ -49,7 +48,7 @@
         <div class="col">
           <div class="card h-85">
             <h5 class="card-title">Date</h5>
-            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
             <div class="card-body">
               <h3 class="card-title">Sunny</h3>  
               <p class="card-text">Temperature:</p>
@@ -62,7 +61,7 @@
         <div class="col">
             <div class="card h-85">
               <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
               <div class="card-body">
                 <h3 class="card-title">Rainy</h3>
                 <p class="card-text">Temperature:</p>
@@ -75,7 +74,7 @@
           <div class="col">
             <div class="card h-85">
               <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
               <div class="card-body">
                 <h3 class="card-title">Rainy</h3> 
                 <p class="card-text">Temperature:</p>
@@ -88,7 +87,7 @@
           <div class="col">
             <div class="card h-85">
               <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
               <div class="card-body">
                 <h3 class="card-title">Rainy</h3>
                 <p class="card-text">Temperature:</p>
@@ -101,7 +100,7 @@
           <div class="col">
             <div class="card h-85">
               <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather Description">
+              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
               <div class="card-body">
                 <h3 class="card-title">Rainy</h3> 
                 <p class="card-text">Temperature:</p>
