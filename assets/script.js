@@ -23,19 +23,29 @@ var previousSearched = document.querySelector("#searched")
 var previousCityArray = JSON.parse(localStorage.getItem('previousCities')) || [];
 var previousSearchesList = document.querySelector("#searched .list-group")
 
-function getUrl(testCity){
+async function getUrl(testCity){
     var apiLink = `https://api.openweathermap.org/data/2.5/forecast?q=${testCity}&units=imperial&lang=en&appid=f443a7bf0556b76f0d415dce60061886`;
     console.log(apiLink);
-    fetch(apiLink)
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(data){
-        for (var i = 0; i < data.length; i++){
-            console.log(data[i]);
-        }
-    });
+    var response = await fetch(apiLink)
+    var data = await response.json()
+    // .then(function(response){
+    //     var data = response.json()
+    //     console.log(data)
+    // })
+    // .then(function(data){
+    //     for (var i = 0; i < data.length; i++){
+    //         console.log(data[i]);
+    //         console.log(data.list[0].dt_txt);
+    // // console.log(data.list[0].dt_txt);
+    //     }
+    // });
+    // days incremit by 8 so do a for loop = 8
+    var test = data.list[0].dt_txt
+    console.log(dayjs(test).format('MM-DD-YYYY'))
     
+    return data;
+    
+
 }
 getUrl()
 
@@ -93,61 +103,3 @@ console.log(citySearch.value);
 
 
 
-
-// // Pulling earlier searches from local storage
-// let earlySearch= JSON.parse(localStorage.getItem("searched")) ||[];
-
-// if (earlySearch !== null) {
-//     for (let i = 0; i < earlySearch.length; i++) {
-//         if (earlySearch[i] === null) {
-//             earlySearch.splice(i, i+1);
-//         } else {
-//             // Populates previous to publish previous search buttons
-//             previousCityArray.push(earlySearch[i]);
-//         }
-//     }
-// }
-
-// function searchHistoryRefresh() {
-//     // Pulls localStorage results of previous searches
-//     earlySearch = JSON.parse(localStorage.getItem("searched"));
-
-//     // Declared under function to ensure list is updated each time
-//     var existingCities = document.querySelectorAll("#searched list-group-item button");
-
-//     if (finder !== null) {
-//         existingCities.forEach(function(button) {
-//             // Ensures buttons aren't repeated for existing searches
-//             for (let i = 0; i < finder.length; i++)
-//             if (button.dataset.city.includes(finder[i])) {
-//                 finder.splice(i, i + 1);
-//             }
-//         })
-//         for (let i = 0; i < finder.length; i++) {
-//             var searchBtn = document.createElement("button");
-//             searchBtn.classList.add("m-2", "btn", "btn-light");
-//             // Sets data-city attribute on button for event listener to reference
-//             searchBtn.dataset.city = finder[i];
-//             searchBtn.textContent = finder[i];
-//             searchBtn.addEventListener("click", (event) => {
-//                 // References data-city property to call API
-//                 // callOpenWeather(event.target.dataset.city);
-//             })
-//             previousSearchesList.appendChild(searchBtn); 
-//         }
-//     }
-// }
-
-// var updateCities = (city) => {
-//     // Ensures searched city isn't pushed into array (and then localStorage) if city has already been searched
-//     if (previousCityArray.includes(city)) {
-//         return;
-//     } else {
-//         previousCityArray.push(city);
-//         // Stores for next user visit
-//         localStorage.setItem("searched", JSON.stringify(previousCityArray));
-        
-//         // Calls searchHistoryRefresh to add new search to previous search buttons
-//         searchHistoryRefresh();
-//     }
-// }
