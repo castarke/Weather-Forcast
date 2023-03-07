@@ -24,30 +24,27 @@ var previousCityArray = JSON.parse(localStorage.getItem('previousCities')) || []
 var previousSearchesList = document.querySelector("#searched .list-group")
 
 async function getUrl(testCity){
+// retreiving the 5 day forcasted weather
     var apiLink = `https://api.openweathermap.org/data/2.5/forecast?q=${testCity}&units=imperial&lang=en&appid=f443a7bf0556b76f0d415dce60061886`;
     console.log(apiLink);
     var response = await fetch(apiLink)
     var data = await response.json()
-    // .then(function(response){
-    //     var data = response.json()
-    //     console.log(data)
-    // })
-    // .then(function(data){
-    //     for (var i = 0; i < data.length; i++){
-    //         console.log(data[i]);
-    //         console.log(data.list[0].dt_txt);
-    // // console.log(data.list[0].dt_txt);
-    //     }
-    // });
-    // days incremit by 8 so do a for loop = 8
-    var test = data.list[0].dt_txt
-    console.log(dayjs(test).format('MM-DD-YYYY'))
-    
-    return data;
-    
+
+    console.log(data);
+
+    renderFutureWeather(data)
 
 }
-getUrl()
+async function getCurrentUrl(testCity){
+    var currentApiLink =`https://api.openweathermap.org/data/2.5/weather?q=${testCity}&units=imperial&lang=en&appid=533b1cafdc14cae714c56b255818f0eb`
+    console.log(currentApiLink);
+    var response = await fetch(currentApiLink);
+    var currentData = await response.json()
+    
+    console.log(currentData);
+
+    renderCurrentWeather(currentData)
+}
 
 
 function renderPreviousSearches() {
@@ -67,7 +64,8 @@ function renderPreviousSearches() {
         // Add click listener to list item
         listItem.addEventListener("click", function() {
             getUrl(city);
-        });
+            getCurrentUrl(city);
+r        });
     });
 }
 
@@ -86,6 +84,7 @@ $(".searchBtn").on('click',function(){
         console.log(citySearch.value);
         var testCity = citySearch.value;
         getUrl(testCity);
+        getCurrentUrl(testCity)
         renderPreviousSearches();
     }
 });
@@ -98,8 +97,81 @@ document.querySelector("#citySearch").value;
 $("#cities").on("click",function(event) {
 event.preventDefault();
 
-console.log(citySearch.value);
+// console.log(citySearch.value);
+// getUrl(citySearch.value);
+
+// console.log(citySearch.value);
+// getCurrentUrl(citySearch.value);
 })
 
+function renderCurrentWeather(data){
+var currentDay = data
+$("#current-city").text("Current City: " + data.name);
+$("#current-temp").text("Temperature (degrees): " + currentDay.main.temp);
+$("#current-climate").text(currentDay.weather[0].description);
+$("#current-date").text("Date: " + date);
+$("#current-wind").text("Speed (mph): " + currentDay.wind.speed);
+$("#current-humidity").text("Humidity: " + currentDay.main.humidity);
+$("#current-img").attr("src", `https://openweathermap.org/img/wn/${currentDay.weather[0].icon}.png`);
+}
+
+
+function renderFutureWeather(data){
+
+var dayOne = data.list[0];
+$("#forcast1-city").text("Current City: "+ data.city.name);
+$("#forcast1-temp").text("Temperature (degrees): " + dayOne.main.temp);
+$("#forcast1-climate").text(dayOne.weather[0].description);
+$("#forcast1-date").text("Date: " +dayOne.dt_txt);
+$("#forcast1-wind").text("Speed (mph)" + dayOne.wind.speed);
+$("#forcast1-humidity").text("Humidity: " + dayOne.main.humidity);
+$("forcast1-img").attr("src", `https://openweathermap.org/img/wn/${dayOne.weather[0].icon}.png`);
+
+var dayTwo =data.list[8];
+$("#forcast2-city").text("Current City: "+ data.city.name);
+$("#forcast2-temp").text("Temperature (degrees): " + dayTwo.main.temp);
+$("#forcast2-climate").text(dayTwo.weather[0].description);
+$("#forcast2-date").text("Date: " +dayTwo.dt_txt);
+$("#forcast2-wind").text("Speed (mph)" + dayTwo.wind.speed);
+$("#forcast2-humidity").text("Humidity: " + dayTwo.main.humidity);
+$("forcast2-img").attr("src", `https://openweathermap.org/img/wn/${dayTwo.weather[0].icon}.png`);
+
+var dayThree =data.list[16];
+$("#forcast3-city").text("Current City: "+ data.city.name);
+$("#forcast3-temp").text("Temperature (degrees): " + dayThree.main.temp);
+$("#forcast3-climate").text(dayThree.weather[0].description);
+$("#forcast3-date").text("Date: " +dayThree.dt_txt);
+$("#forcast3-wind").text("Speed (mph)" + dayThree.wind.speed);
+$("#forcast3-humidity").text("Humidity: " + dayThree.main.humidity);
+$("forcast3-img").attr("src", `https://openweathermap.org/img/wn/${dayThree.weather[0].icon}.png`);
+
+var dayFour = data.list[24]
+$("#forcast4-city").text("Current City: "+ data.city.name);
+$("#forcast4-temp").text("Temperature (degrees): " + dayFour.main.temp);
+$("#forcast4-climate").text(dayFour.weather[0].description);
+$("#forcast4-date").text("Date: " +dayFour.dt_txt);
+$("#forcast4-wind").text("Speed (mph)" + dayFour.wind.speed);
+$("#forcast4-humidity").text("Humidity: " + dayFour.main.humidity);
+$("forcast4-img").attr("src", `https://openweathermap.org/img/wn/${dayFour.weather[0].icon}.png`);
+
+var dayFive = data.list[32]
+$("#forcast5-city").text("Current City: "+ data.city.name);
+$("#forcast5-temp").text("Temperature (degrees): " + dayFive.main.temp);
+$("#forcast5-climate").text(dayFive.weather[0].description);
+$("#forcast5-date").text("Date: " +dayFive.dt_txt);
+$("#forcast5-wind").text("Speed (mph)" + dayFive.wind.speed);
+$("#forcast5-humidity").text("Humidity: " + dayFive.main.humidity);
+$("forcast5-img").attr("src", `https://openweathermap.org/img/wn/${dayOne.weather[0].icon}.png`);
+}
+
+
+
+
+
+// for (let i =7; i<=data.list.length; i+=8){
+// const forcastDay = data.list[i];
+// console.log(forcastDay);
+// $(`#forcast-city${i}`).text("Current City: " + data.city.name);
+// $(`#forcast-temp${i}`).text("Temperature: " + forcastDay.main.temp);
 
 

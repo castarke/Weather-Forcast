@@ -33,91 +33,80 @@
     </div>
     <h2 class="weatherHeader p-1 mb-1 text-center"> Current Weather Forcast </h2>
     <div class="card mb-">
-        <h5 class="card-title">Date</h5>
-        <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
+        <h5 class ="card-title" id="current-city">Current City</h5>
+        <h5 class="card-title" id="current-date">Date</h5>
+        <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current-img" style="width: fit-content; height:50px; align-items: center;">
         <div class="card-body">
-        <h3 class="card-title">Rainy</h3>
-          <p class="card-text">Temperature:</p>
-          <p class="card-text">Wind:</p>
-          <p class="card-text">Humidity:</p>
-          <p class="card-text">Precipitation:</p>
+        <h3 class="card-title" id="current-climate" >***</h3>
+          <p class="card-text" id="current-temp">Temperature:</p>
+          <p class="card-text" id="current-wind">Wind:</p>
+          <p class="card-text" id="current-humidity">Humidity:</p>
         </div>
       </div>
       <h2 class="weatherHeader p-1 mb-1 text-center"> Future Weather Forcast </h2>
     <div class="weather row row-cols-1 row-cols-md-5 g-2 pb-3">
         <div class="col">
           <div class="card h-85">
-            <h5 class="card-title">Date</h5>
-            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
+            <h5 class="card-title" id="forcast1-city">Current City</h5>
+            <h5 class="card-title" id="forcast1-date">Date</h5>
+            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Forcast1 Weather" id="forcast1-img" style="width: fit-content; height:50px; align-items: center;">
             <div class="card-body">
-              <h3 class="card-title">Sunny</h3>  
-              <p class="card-text">Temperature:</p>
-              <p class="card-text">Wind:</p>
-              <p class="card-text">Humidity:</p>
-              <p class="card-text">Precipitation:</p>
+              <h3 class="card-title" id="forcast1-climate">***</h3>  
+              <p class="card-text" id="forcast1-temp">Temperature:</p>
+              <p class="card-text" id="forcast1-wind">Wind:</p>
+              <p class="card-text" id="forcast1-humidity">Humidity:</p>
             </div>
           </div>
         </div>
         <div class="col">
-            <div class="card h-85">
-              <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
-              <div class="card-body">
-                <h3 class="card-title">Rainy</h3>
-                <p class="card-text">Temperature:</p>
-                <p class="card-text">Wind:</p>
-                <p class="card-text">Humidity:</p>
-                <p class="card-text">Precipitation:</p>
-              </div>
+          <div class="card h-85">
+            <h5 class="card-title" id="forcast2-city">Current City</h5>
+            <h5 class="card-title" id="forcast2-date">Date</h5>
+            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Forcast2 Weather" id="forcast2-img" style="width: fit-content; height:50px; align-items: center;">
+            <div class="card-body">
+              <h3 class="card-title" id="forcast2-climate">***</h3>  
+              <p class="card-text" id="forcast2-temp">Temperature:</p>
+              <p class="card-text" id="forcast2-wind">Wind:</p>
+              <p class="card-text" id="forcast2-humidity">Humidity:</p>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-85">
-              <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
-              <div class="card-body">
-                <h3 class="card-title">Rainy</h3> 
-                <p class="card-text">Temperature:</p>
-                <p class="card-text">Wind:</p>
-                <p class="card-text">Humidity:</p>
-                <p class="card-text">Precipitation:</p>
-              </div>
+        </div>        <div class="col">
+          <div class="card h-85">
+            <h5 class="card-title" id="forcast3-city">Current City</h5>
+            <h5 class="card-title" id="forcast3-date">Date</h5>
+            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Forcast3 Weather" id="forcast3-img" style="width: fit-content; height:50px; align-items: center;">
+            <div class="card-body">
+              <h3 class="card-title" id="forcast3-climate">***</h3>  
+              <p class="card-text" id="forcast3-temp">Temperature:</p>
+              <p class="card-text" id="forcast3-wind">Wind:</p>
+              <p class="card-text" id="forcast3-humidity">Humidity:</p>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-85">
-              <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
-              <div class="card-body">
-                <h3 class="card-title">Rainy</h3>
-                <p class="card-text">Temperature:</p>
-                <p class="card-text">Wind:</p>
-                <p class="card-text">Humidity:</p>
-                <p class="card-text">Precipitation:</p>
-              </div>
+        </div>        <div class="col">
+          <div class="card h-85">
+            <h5 class="card-title" id="forcast4-city">Current City</h5>
+            <h5 class="card-title" id="forcast4-date">Date</h5>
+            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Forcast4 Weather" id="forcast4-img" style="width: fit-content; height:50px; align-items: center;">
+            <div class="card-body">
+              <h3 class="card-title" id="forcast4-climate">***</h3>  
+              <p class="card-text" id="forcast4-temp">Temperature:</p>
+              <p class="card-text" id="forcast4-wind">Wind:</p>
+              <p class="card-text" id="forcast4-humidity">Humidity:</p>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-85">
-              <h5 class="card-title">Date</h5>
-              <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Current Weather" id="current" style="width: fit-content; height:50px; align-items: center;">
-              <div class="card-body">
-                <h3 class="card-title">Rainy</h3> 
-                <p class="card-text">Temperature:</p>
-                <p class="card-text">Wind:</p>
-                <p class="card-text">Humidity:</p>
-                <p class="card-text">Precipitation:</p>
-              </div>
+        </div>        <div class="col">
+          <div class="card h-85">
+            <h5 class="card-title" id="forcast5-city">Current City</h5>
+            <h5 class="card-title" id="forcast5-date">Date</h5>
+            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Forcast5 Weather" id="forcast5-img" style="width: fit-content; height:50px; align-items: center;">
+            <div class="card-body">
+              <h3 class="card-title" id="forcast5-climate">***</h3>  
+              <p class="card-text" id="forcast5-temp">Temperature:</p>
+              <p class="card-text" id="forcast5-wind">Wind:</p>
+              <p class="card-text" id="forcast5-humidity">Humidity:</p>
             </div>
           </div>
-        
-        
-    <!-- create a search bar to search for cities -->
-    <!-- create a list of previous searched cities -->
-    <!-- when searching for cities, it includes dates  -->
-    <!-- when you search for the same city it does not show up in the list twice -->
-    <!-- look at bolma, bootstrap, tailwind, foundation, materialize for frameworks -->
-
+        </div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
