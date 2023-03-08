@@ -106,7 +106,7 @@ $("#forcast1-city").text("Current City: "+ data.city.name);
 $("#forcast1-temp").text("Temperature (degrees): " + dayOne.main.temp);
 $("#forcast1-climate").text(dayOne.weather[0].description);
 $("#forcast1-date").text("Date: " +dayOne.dt_txt);
-$("#forcast1-wind").text("Speed (mph)" + dayOne.wind.speed);
+$("#forcast1-wind").text("Speed (mph): " + dayOne.wind.speed);
 $("#forcast1-humidity").text("Humidity: " + dayOne.main.humidity);
 $("#forcast1-img").attr("src", `https://openweathermap.org/img/wn/${dayOne.weather[0].icon}.png`);
 
@@ -116,7 +116,7 @@ $("#forcast2-city").text("Current City: "+ data.city.name);
 $("#forcast2-temp").text("Temperature (degrees): " + dayTwo.main.temp);
 $("#forcast2-climate").text(dayTwo.weather[0].description);
 $("#forcast2-date").text("Date: " +dayTwo.dt_txt);
-$("#forcast2-wind").text("Speed (mph)" + dayTwo.wind.speed);
+$("#forcast2-wind").text("Speed (mph): " + dayTwo.wind.speed);
 $("#forcast2-humidity").text("Humidity: " + dayTwo.main.humidity);
 $("#forcast2-img").attr("src", `https://openweathermap.org/img/wn/${dayTwo.weather[0].icon}.png`);
 
@@ -126,7 +126,7 @@ $("#forcast3-city").text("Current City: "+ data.city.name);
 $("#forcast3-temp").text("Temperature (degrees): " + dayThree.main.temp);
 $("#forcast3-climate").text(dayThree.weather[0].description);
 $("#forcast3-date").text("Date: " +dayThree.dt_txt);
-$("#forcast3-wind").text("Speed (mph)" + dayThree.wind.speed);
+$("#forcast3-wind").text("Speed (mph): " + dayThree.wind.speed);
 $("#forcast3-humidity").text("Humidity: " + dayThree.main.humidity);
 $("#forcast3-img").attr("src", `https://openweathermap.org/img/wn/${dayThree.weather[0].icon}.png`);
 
@@ -136,7 +136,7 @@ $("#forcast4-city").text("Current City: "+ data.city.name);
 $("#forcast4-temp").text("Temperature (degrees): " + dayFour.main.temp);
 $("#forcast4-climate").text(dayFour.weather[0].description);
 $("#forcast4-date").text("Date: " +dayFour.dt_txt);
-$("#forcast4-wind").text("Speed (mph)" + dayFour.wind.speed);
+$("#forcast4-wind").text("Speed (mph): " + dayFour.wind.speed);
 $("#forcast4-humidity").text("Humidity: " + dayFour.main.humidity);
 $("#forcast4-img").attr("src", `https://openweathermap.org/img/wn/${dayFour.weather[0].icon}.png`);
 
@@ -146,7 +146,7 @@ $("#forcast5-city").text("Current City: "+ data.city.name);
 $("#forcast5-temp").text("Temperature (degrees): " + dayFive.main.temp);
 $("#forcast5-climate").text(dayFive.weather[0].description);
 $("#forcast5-date").text("Date: " +dayFive.dt_txt);
-$("#forcast5-wind").text("Speed (mph)" + dayFive.wind.speed);
+$("#forcast5-wind").text("Speed (mph): " + dayFive.wind.speed);
 $("#forcast5-humidity").text("Humidity: " + dayFive.main.humidity);
 $("#forcast5-img").attr("src", `https://openweathermap.org/img/wn/${dayFive.weather[0].icon}.png`);
 
