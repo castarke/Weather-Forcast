@@ -23,14 +23,19 @@ To make the page display weather, please start by searching for a city, you will
 ## Usage
 To make the page display weather, please start by searching for a city, you will then see the data populate. 
 
+Live URL:
+
+Screenshot:
+
+![weatherDashboard-screenshot](https://user-images.githubusercontent.com/122697165/223613474-551d4aef-f500-464d-b2db-0e4163cd7a26.png)
+
+
 
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+OpenWeather Api - https://openweathermap.org/api
+OpenWeather Current Weather API - https://openweathermap.org/current
+OpenWeather 5 Day/3hour Forecast API - https://openweathermap.org/forecast5
 
 
