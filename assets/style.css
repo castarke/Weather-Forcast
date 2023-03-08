@@ -1,12 +1,10 @@
 body {
     background-color: skyblue;
     margin: 10px;
+    padding: 10px;
 }
 
 .card {
     margin: 20px;
-}
-
-.list-group:hover {
-    background-color: gray;
+    padding: 10px;
 }
