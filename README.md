@@ -23,7 +23,7 @@ To make the page display weather, please start by searching for a city, you will
 ## Usage
 To make the page display weather, please start by searching for a city, you will then see the data populate. 
 
-Live URL:
+Live URL: https://castarke.github.io/Weather-Forcast/
 
 Screenshot:
 
